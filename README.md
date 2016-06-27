@@ -1,9 +1,11 @@
 # webpack-react-redux-react-router
 A complete boilerplate for making apps with react, redux, react-router with the help of webpack. 
 
+![](http://jpsierens.com/wp-content/uploads/2016/06/filterableTable-1.gif)
+
 Contains: 
 
-* a working example of a filterable table which you can play around with.
+* a working example of a filterable table which you can play around with (look above).
 * ES6 - 7 Support with Babel
 * Redux dev tools to help you keep track of the app's state
 * hot module replacement support so you can change modules (defined in webpack config) without having to reload the browser
