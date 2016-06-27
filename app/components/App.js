@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const App = ({ children }) =>
     <div>
-        <h1>Filterable table</h1>
+        <h1>ss table</h1>
         { children }
         <footer>
             <Link to="/">Filterable Table</Link>

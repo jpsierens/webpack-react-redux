@@ -7,7 +7,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool: 'eval-source-map',
     entry: [
-        'webpack-hot-middleware/client?reload=true',
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        'react-hot-loader/patch',
         path.join(__dirname, 'app/index.js')
     ],
     output: {
@@ -33,10 +35,7 @@ module.exports = {
             {
                 test: /\.js?$/,
                 exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    "presets": ["react", "es2015", "stage-0", "react-hmre"]
-                }
+                loader: 'babel'
             }, 
             {
                 test: /\.json?$/,
