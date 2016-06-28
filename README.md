@@ -1,3 +1,5 @@
+![](http://jpsierens.com/wp-content/uploads/2016/06/react-eco-wp.gif)
+
 # webpack-react-redux-react-router
 A complete boilerplate for making apps with react, redux, react-router with the help of webpack. 
 
