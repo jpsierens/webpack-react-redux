@@ -42,6 +42,10 @@ The app updates without the browser having to reload. You don't lose state!
 
 This will build the app into the "dist" directory in the root of the project. It contains the index.html along with the minified assets, ready for production.
 
+![](http://i.imgur.com/uUg2A3S.png)
+
+It should look something like the above image.
+
 ## I don't understand anything!
 
 I went ahead and wrote a detailed series of posts on this project for you. I hope it helps you understand better:
