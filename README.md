@@ -44,7 +44,7 @@ This will build the app into the "dist" directory in the root of the project. It
 
 ## I don't understand anything!
 
-I went ahead and wrote a detailed series of posts on this project for you. Maybe it helps you understand better:
+I went ahead and wrote a detailed series of posts on this project for you. I hope it helps you understand better:
 
 * [configuring webpack](http://jpsierens.com/tutorial-react-redux-webpack/)
 * [understanding the app, part 1 (index.js, store, reducers)](http://jpsierens.com/simple-react-redux-application/)
