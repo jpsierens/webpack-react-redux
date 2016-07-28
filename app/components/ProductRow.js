@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react';
 
 const ProductRow = ({ data }) =>
-    <div>
-        <p>{data.name} = {data.price} </p>
+    <div style={{padding: '5px 0'}}>
+    	{data.name} = {data.price} <button>ADD</button>
     </div>;
 
 ProductRow.PropTypes = {

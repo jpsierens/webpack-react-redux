@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { filterTable } from '../actions';
 import ProductTable from '../components/ProductTable';
 
-const FilterableTable = ({ filter, onFilter }) => {
+const FilterableTable = ({ filter, products, onFilter }) => {
     let input;
 
     return (
@@ -13,19 +13,21 @@ const FilterableTable = ({ filter, onFilter }) => {
                 ref={node => {input = node;}}
                 onChange={() => onFilter(input.value)} />
 
-            <ProductTable filter={filter} />
+            <ProductTable filter={filter} products={products} />
         </div>
     );
 };
 
 FilterableTable.propTypes = {
     filter: PropTypes.string,
+    products: PropTypes.array,
     onFilter: PropTypes.func
 };
 
 const mapStateToProps = (state) => {
     return {
-        filter: state.filter
+        filter: state.filter,
+        products: state.products
     };
 };
 

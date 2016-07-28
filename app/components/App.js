@@ -3,10 +3,10 @@ import { Link } from 'react-router';
 
 const App = ({ children }) =>
     <div>
-        <h1>Filter table</h1>
+        <h1>Product table</h1>
         { children }
         <footer>
-            <Link to="/">Filterable Table</Link>
+            <Link to="/">Products</Link>
             <Link to="/about">About</Link>
         </footer>
     </div>;
