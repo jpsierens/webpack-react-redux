@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 
 const ProductRow = ({ data }) =>
     <div style={{padding: '5px 0'}}>
-    	{data.name} = {data.price} <button>ADD</button>
+    	<button>ADD</button> {data.name}(x{data.stock}) - {data.price}
     </div>;
 
 ProductRow.PropTypes = {

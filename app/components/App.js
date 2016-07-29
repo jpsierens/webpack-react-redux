@@ -7,7 +7,7 @@ const App = ({ children }) =>
         { children }
         <footer>
             <Link to="/">Products</Link>
-            <Link to="/about">About</Link>
+            <Link to="/cart">Cart</Link>
         </footer>
     </div>;
 

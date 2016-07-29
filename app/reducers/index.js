@@ -12,12 +12,12 @@ const filter = (state = '', action) => {
 };
 
 const defaultProducts = [
-	{ category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football' },
-	{ category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball' },
-	{ category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball' },
-	{ category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch' },
-	{ category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5' },
-	{ category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7' }
+	{ id: 1, price: '$49.99', name: 'Football' },
+	{ id: 2, price: '$9.99', name: 'Baseball' },
+	{ id: 3, price: '$29.99', name: 'Basketball' },
+	{ id: 4, price: '$99.99', name: 'iPod Touch' },
+	{ id: 5, price: '$399.99', name: 'iPhone 5' },
+	{ id: 6, price: '$199.99', name: 'Nexus 7' }
 ];
 
 const products = (state = defaultProducts, action) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-const About = () =>
+const Cart = () =>
     <div>
         Just a dummy page to showcase react-router!
     </div>;
 
 
-export default About;
+export default Cart;
