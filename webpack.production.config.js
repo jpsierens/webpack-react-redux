@@ -18,12 +18,12 @@ module.exports = {
         publicPath: '/'
     },
     plugins: [
-        // webpack gives your modules and chunks ids to identify them. Webpack can vary the 
-        // distribution of the ids to get the smallest id length for often used ids with 
+        // webpack gives your modules and chunks ids to identify them. Webpack can vary the
+        // distribution of the ids to get the smallest id length for often used ids with
         // this plugin
         new webpack.optimize.OccurenceOrderPlugin(),
 
-        // handles creating an index.html file and injecting assets. necessary because assets 
+        // handles creating an index.html file and injecting assets. necessary because assets
         // change name because the hash part changes. We want hash name changes to bust cache
         // on client browsers.
         new HtmlWebpackPlugin({
@@ -32,7 +32,7 @@ module.exports = {
             filename: 'index.html'
         }),
         // extracts the css from the js files and puts them on a separate .css file. this is for
-        // performance and is used in prod environments. Styles load faster on their own .css 
+        // performance and is used in prod environments. Styles load faster on their own .css
         // file as they dont have to wait for the JS to load.
         new ExtractTextPlugin('[name]-[hash].min.css'),
         // handles uglifying js
@@ -53,7 +53,22 @@ module.exports = {
         })
     ],
 
+    // ESLint options
+    eslint: {
+        configFile: '.eslintrc',
+        failOnWarning: false,
+        failOnError: true
+    },
+
     module: {
+        // Runs before loaders
+        preLoaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint'
+            }
+        ],
         // loaders handle the assets, like transforming sass to css or jsx to js.
         loaders: [{
             test: /\.js?$/,
@@ -64,15 +79,15 @@ module.exports = {
             loader: 'json'
         }, {
             test: /\.scss$/,
-            // we extract the styles into their own .css file instead of having 
+            // we extract the styles into their own .css file instead of having
             // them inside the js.
             loader: ExtractTextPlugin.extract('style', 'css!postcss!sass')
-        },{ 
-            test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-            loader: "url-loader?limit=10000&minetype=application/font-woff" 
-        },{ 
-            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
-            loader: "file-loader" 
+        },{
+            test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            loader: "url-loader?limit=10000&minetype=application/font-woff"
+        },{
+            test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+            loader: "file-loader"
         }]
     },
     postcss: [

@@ -30,13 +30,25 @@ module.exports = {
           'process.env.NODE_ENV': JSON.stringify('development')
         })
     ],
+    eslint: {
+        configFile: '.eslintrc',
+        failOnWarning: false,
+        failOnError: true
+    },
     module: {
+        preLoaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint'
+            }
+        ],
         loaders: [
             {
                 test: /\.js?$/,
                 exclude: /node_modules/,
                 loader: 'babel'
-            }, 
+            },
             {
                 test: /\.json?$/,
                 loader: 'json'
