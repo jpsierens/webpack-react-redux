@@ -5,7 +5,7 @@ const ProductRow = ({ data }) =>
         <p>{data.name} = {data.price} </p>
     </div>;
 
-ProductRow.PropTypes = {
+ProductRow.propTypes = {
     data: PropTypes.object
 };
 

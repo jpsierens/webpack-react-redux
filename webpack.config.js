@@ -33,7 +33,7 @@ module.exports = {
     eslint: {
         configFile: '.eslintrc',
         failOnWarning: false,
-        failOnError: true
+        failOnError: false
     },
     module: {
         preLoaders: [

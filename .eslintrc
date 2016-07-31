@@ -113,13 +113,17 @@
     /**
      * Style
      */
-    "indent": [2, 4],                // http://eslint.org/docs/rules/indent
+    "indent": [
+      2,
+      4,
+      { "SwitchCase": 1 }
+    ],                              // http://eslint.org/docs/rules/indent
     "brace-style": [
-      2,               // http://eslint.org/docs/rules/brace-style
+      2,                          
       "1tbs", {
         "allowSingleLine": true
       }
-    ],
+    ],                               // http://eslint.org/docs/rules/brace-style
     "quotes": [
       2, "single", "avoid-escape"    // http://eslint.org/docs/rules/quotes
     ],

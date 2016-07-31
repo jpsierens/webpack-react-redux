@@ -27,7 +27,7 @@ const ProductTable = ({ filter }) => {
     return <div> {rows} </div>;
 };
 
-ProductTable.PropTypes = {
+ProductTable.propTypes = {
     filter: PropTypes.string
 };
 
