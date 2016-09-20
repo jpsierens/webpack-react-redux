@@ -1,7 +1,7 @@
 {
-  "name": "teambuilder",
+  "name": "webpack-react-redux-react-router",
   "version": "1.0.0",
-  "description": "Build teams of any kind",
+  "description": "A boilerplate for playing around with react, redux and react-router with the help of webpack.",
   "main": "index.js",
   "scripts": {
     "test": "",
