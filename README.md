@@ -52,3 +52,6 @@ I went ahead and wrote a detailed series of posts on this project for you. I hop
 * [configuring webpack](http://jpsierens.com/tutorial-react-redux-webpack/)
 * [understanding the app, part 1 (index.js, store, reducers)](http://jpsierens.com/simple-react-redux-application/)
 * [understanding the app, part 2 ( Root.js, router and the rest of the app)](http://jpsierens.com/simple-react-redux-application-2/)
+
+## Why doesn't it have async?
+To keep it unopinionated. You choose what async library you want. If you want to check out a full example with async in it, check this simple [todo-app](https://github.com/jpsierens/todo-app)
