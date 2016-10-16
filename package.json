@@ -17,6 +17,7 @@
   "author": "Jean-Pierre Sierens",
   "license": "MIT",
   "dependencies": {
+    "file-loader": "^0.9.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-hot-loader": "^3.0.0-beta.2",
