@@ -1,5 +1,5 @@
 {
-  "name": "webpack-react-redux-react-router",
+  "name": "webpack-react-redux",
   "version": "1.0.0",
   "description": "A boilerplate for playing around with react, redux and react-router with the help of webpack.",
   "main": "index.js",
