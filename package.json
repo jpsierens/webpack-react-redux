@@ -1,12 +1,12 @@
 {
-  "name": "webpack-react-redux-react-router",
+  "name": "webpack-react-redux",
   "version": "1.0.0",
   "description": "A boilerplate for playing around with react, redux and react-router with the help of webpack.",
   "main": "index.js",
   "scripts": {
     "test": "",
     "start": "node server",
-    "build": "rimraf dist && node_modules/.bin/webpack --config ./webpack.production.config.js --progress --profile --colors",
+    "build": "rimraf dist && webpack --config ./webpack.production.config.js --progress --profile --colors",
     "eslint": "eslint ."
   },
   "keywords": [
