@@ -1,3 +1,7 @@
+# Adapted from [jpsierens](https://github.com/jpsierens)/[webpack-react-redux)](https://github.com/jpsierens/webpack-react-redux)
+
+## By [Mike Wolf](https://github.com/EmbeddedMike), for use on [gomix](https://gomix.com). github repository for the adapted version is [here](https://github.com/EmbeddedMike/webpack-react-redux)
+
 ![](http://jpsierens.com/wp-content/uploads/2016/06/react-eco-wp.gif)
 
 # webpack-react-redux
@@ -15,7 +19,9 @@ Contains:
 * eslint to keep your js readable
 * much more...
 
-
+Adaptation for gomix:
+* Added watch.json to keep the server from restarting unnecessarily
+* Modified webpack.config.js 
 
 ![](http://jpsierens.com/wp-content/uploads/2016/06/filterableTable-1.gif)
 
