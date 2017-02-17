@@ -4,10 +4,11 @@ import { footer } from '../styles/footer.scss';
 
 const App = ({ children }) =>
     <div>
-        <h1>Filter table</h1>
+
+        <h1>Filtering </h1>
         { children }
         <footer className={footer}>
-            <Link to="/">Filterable Table</Link>
+            <Link to="/">Filtering the Table</Link>
             <Link to="/about">About</Link>
         </footer>
     </div>;
