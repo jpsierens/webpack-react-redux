@@ -1,5 +1,5 @@
 import createHistory from 'history/createBrowserHistory';
-import { applyMiddleware, createStore, compose } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import rootReducer from '../reducers';
 
@@ -10,8 +10,6 @@ export function configureStore(initialState) {
     return createStore(
         rootReducer,
         initialState,
-        compose(
-            applyMiddleware(middleware),
-        )
+        applyMiddleware(middleware),
     );
 }
