@@ -1,19 +1,16 @@
-import React, { PropTypes } from 'react';
-import { Link } from 'react-router';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { footer } from '../styles/footer.scss';
+import Routes from '../routes';
 
-const App = ({ children }) =>
+const App = () =>
     <div>
         <h1>Filter table</h1>
-        { children }
+        { Routes }
         <footer className={footer}>
             <Link to="/">Filterable Table</Link>
             <Link to="/about">About</Link>
         </footer>
     </div>;
-
-App.propTypes = {
-    children: PropTypes.object
-};
 
 export default App;
