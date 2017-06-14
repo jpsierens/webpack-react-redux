@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ProductRow from './ProductRow';
 
 const products = [
@@ -13,7 +14,7 @@ const products = [
 const ProductTable = ({ filter }) => {
     let rows = [];
 
-    products.forEach((p) => {
+    products.forEach(p => {
         const nameLC = p.name.toLowerCase();
         const filterLC = filter.toLowerCase();
 
