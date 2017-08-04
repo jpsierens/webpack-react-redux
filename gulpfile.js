@@ -8,9 +8,23 @@
  * 
  */
 var gulp = require('gulp'),
-    webpack = require('webpack');
+    webpack = require('webpack'),
+    zip = require("gulp-zip"),
+    del = require("del"),
+    gulpSequence = require("gulp-sequence");
+
+//clean dist folder before
+gulp.task("clean",function( done ){
+    return del(["dist.zip","dist"],done);
+});
+//create a zip 
+gulp.task("zip",function( done ){
+    gulp.src("./dist/**/*").pipe(zip("./dist.zip")).pipe(gulp.dest("./"));
+});
+//build dev js
+
 //use the local command to execute webpack 
-gulp.task("dev", function(){
+gulp.task("build-dev", function(){
     return require("child_process").
     execSync('webpack --config webpack.config.js',
     {
@@ -18,7 +32,7 @@ gulp.task("dev", function(){
     });
 });
 
-gulp.task("prod", function(){
+gulp.task("build-prod", function(){
     return require("child_process").
     execSync('webpack --config webpack.production.config.js',
     {
@@ -26,3 +40,10 @@ gulp.task("prod", function(){
     });
 });
 
+//execute by sequence 
+gulp.task("dev",function(done){
+    gulpSequence("clean","build-dev","zip",done)
+});
+gulp.task("prod",function(done){
+    gulpSequence("clean","build-prod","zip",done)
+});
