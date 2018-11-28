@@ -17,7 +17,7 @@ Contains:
 
 
 
-![](http://jpsierens.com/wp-content/uploads/2016/06/filterableTable-1.gif)
+![](http://jpsierens.me/wp-content/uploads/2016/06/filterableTable-1.gif)
 
 
 ## Run the app
@@ -33,7 +33,7 @@ Yes, it takes a while to load the first time you open the app.
 
 Yup! Take a look:
 
-![](http://jpsierens.com/wp-content/uploads/2016/06/HMR4.gif)
+![](http://jpsierens.me/wp-content/uploads/2016/06/HMR4.gif)
 
 The app updates without the browser having to reload. You don't lose state!
 
