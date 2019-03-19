@@ -3,6 +3,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     devtool: 'eval-source-map',
@@ -24,6 +25,7 @@ module.exports = {
           inject: 'body',
           filename: 'index.html'
         }),
+        new OpenBrowserPlugin({ url: 'http://localhost:3000' }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
