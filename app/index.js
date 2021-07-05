@@ -15,13 +15,10 @@ render(
 
 if (module.hot) {
     module.hot.accept('./containers/Root', () => {
-        const newConfigureStore = require('./store/configureStore');
-        const newStore = newConfigureStore.configureStore();
-        const newHistory = newConfigureStore.history;
-        const NewRoot = require('./containers/Root').default;
+        require('./containers/Root');
         render(
             <AppContainer>
-                <NewRoot store={newStore} history={newHistory} />
+                <Root store={store} history={history} />
             </AppContainer>,
             document.getElementById('root')
         );
